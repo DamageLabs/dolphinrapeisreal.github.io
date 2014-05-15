@@ -1,0 +1,50 @@
+---
+title: Overview
+nav: projects
+subnav: exemplar-home
+layout: default
+---
+<p>
+History has proven that anti-gun advocates always use completely rational and factual arguments to attack gun owners and their rights. So here is an equally rational rebuttal.
+</p>
+
+<p>
+In 2013, there were 672 dolphin rapes recorded in the United States although the number of victims is believed to be exponentially higher because of dolphins threatening to re-abuse outspoken victims.
+</p>
+
+<p>
+Our campaign <b><i>“Guns Prevent Dolphin Rape”</i></b> is the first step in the right direction.
+</p>
+
+<p>
+We are truly disappointed that people want to restrict gun ownership in the United States. It is time we accept that we have a serious problem with dolphin rape, and firearm ownership is the only resolution.
+</p>
+
+<p>
+<h2>You can’t blow a rape whistle under water.</h2>
+</p>
+<br />
+
+<h1>Quotes</h1>
+<div id="projects">
+  {% for page in site.pages %}
+    {% if page.box == true %}
+      {% if page.link %}
+        <a class="project" href="{{ page.link }}">
+      {% else %}
+        <a class="project" href="{{ page.url | replace: '/index.html', '' }}">
+      {% endif %}
+          <div class="project-header">
+              <h2>
+                  {{ page.title }}
+              </h2>
+          </div>
+          <div class="project-body">
+            <p>
+                {{ page.summary }}
+            </p>
+          </div>
+        </a>
+    {% endif %}
+  {% endfor %}
+</div>
